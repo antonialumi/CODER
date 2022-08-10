@@ -1,0 +1,133 @@
+/*GENERAL*/
+@import url('https://fonts.google.com/betterspecimen/Comfortaa');
+*{
+  padding: 1px;
+  margin:16px;
+  background-color: ;
+}
+p {
+  padding: 0px;
+}
+/*SLIDESHOW*/
+.slideshow{
+  display: vertical-align;
+}
+.slideshow {
+  list-style-type: none;
+}
+
+/*NAVBAR*/
+li {
+  margin:10px;
+  display: inline;
+}
+ul {
+  margin:0px;
+  padding: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+ul {
+  border: 0px solid #006090;
+}
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+li a {
+  font-family: "Comfortaa";
+  font-size: 20px;
+  color: #A9A9A9;
+}
+.active {
+  background-color: #04AA6D;
+}
+a:hover{
+  color: #8fbc8f;
+}
+/*ANIMATIONS*/
+
+/*CHECKLIST*/
+body {
+  font-family: sans-serif;
+}
+
+.container {
+    padding: 1px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+   color: #C0C0C0;
+   font-size: 20px;
+}
+.checkbox {
+    width: 100%;
+    margin: 3px auto;
+    position: relative;
+    display: block;
+}
+.checkbox input[type="checkbox"] {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+}
+.checkbox label {
+    position: relative;
+}
+.checkbox label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #7bbe72;
+}
+.checkbox label:after {
+  content: '';
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #7bbe72;
+    border-left: 2px solid #7bbe72;
+    -webkit-transform: rotate(-45deg) scale(0);
+    transform: rotate(-45deg) scale(0);
+    transition: transform ease 0.25s;
+    will-change: transform;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+.checkbox input[type="checkbox"]:checked ~ label::before {
+    color: #7bbe72;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label::after {
+    -webkit-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+}
+.checkbox label {
+    min-height: 34px;
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    vertical-align: sub;
+}
+.checkbox label span {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: 0;
+}
