@@ -3,7 +3,7 @@
 *{
   padding: 1px;
   margin:16px;
-  background-color: ;
+  background-color: #4c5f4a;
 }
 p {
   padding: 0px;
@@ -11,13 +11,21 @@ p {
 }
 .p, .titulo{
   color: black;
+  background-color: #ffff;
 }
 .content {
   grid-area: content;
 }
+.contenedor{
+  background-color: #ffff;
+  border: 5px;
+  border-radius: 15px;
+}
 .derecha {
   float: right;
-  -webkit-margin-start: 50%;
+  -webkit-margin-start: 65%;
+  background-color: #ffff;
+  border-radius: 15px;
 }
 .logo {
   -webkit-margin-start: 50%;
@@ -35,9 +43,9 @@ p {
 }
 
 .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6, .grid-item7{
-  background: grey;
+  background: rgb(255, 255, 255);
   text-align: center;
-  border: black 5px solid;
+  border: rgb(255, 255, 255) 5px solid;
   width: 100px;
   height: 200px;
 }
@@ -45,7 +53,7 @@ p {
   transform: 10px;
   transition-duration: 1s;
 }
-/*
+
 /*SLIDESHOW*/
 
 .photo {
@@ -56,6 +64,7 @@ p {
   height: 1100px;
   animation: round 16s infinite;
   opacity: 0;
+  border-radius: 15px;
 }
 @keyframes round {
   25% {
@@ -128,7 +137,7 @@ li ul{
 li a {
   font-family: "Comfortaa";
   font-size: 20px;
-  color: #A9A9A9;
+  color: #4c5f4a;
 }
 .active {
   background-color: #04AA6D;
