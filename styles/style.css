@@ -1,38 +1,50 @@
-/*GENERAL*/
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
-*{
-  padding: 1px;
-  margin:16px;
-  background-color: #4c5f4a;
+* {
+  font-family: "Comfortaa";
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
-p {
-  padding: 0px;
-  color: black;
+
+/* BACKGROUND */
+.backgroundColor{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(157, 185, 153, 0.596));
 }
-.p, .titulo{
-  color: black;
-  background-color: #ffff;
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(157, 185, 153, 0.596)), url(../images/cacerola.jpeg);
+  background-size: cover;
+  background-position: center;
 }
-.content {
-  grid-area: content;
+.banner2{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(157, 185, 153, 0.596)), url(../images/especias.jpeg);
+  background-size: cover;
+  background-position: center;
 }
-.contenedor{
-  background-color: #ffff;
-  border: 5px;
-  border-radius: 15px;
+
+/* TEXT */
+.title {
+  margin: 300px 928px auto 125px;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-size: 80px;
+  padding: 2px;
+  color: #FFFFFF;
 }
-.derecha {
-  float: right;
-  -webkit-margin-start: 65%;
-  background-color: #ffff;
-  border-radius: 15px;
+
+.text {
+  width: 700px;
+  height: 200px;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-size: 24px;
+  margin-left: 130px;
+  margin-top: 15px;
+  color: #FFFFFF;
 }
-.logo {
-  -webkit-margin-start: 50%;
-  position: absolute; 
-    top: 0px; 
-    right: 0px; 
-}
+  
 /*GRIDS*/
 .grid-container {
   display: grid;
@@ -43,16 +55,82 @@ p {
 }
 
 .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6, .grid-item7{
-  background: rgb(255, 255, 255);
+  background: rgb(216, 185, 44);
   text-align: center;
-  border: rgb(255, 255, 255) 5px solid;
-  width: 100px;
+  border-radius: 30px;
+  margin-top: 300px;
+  width: 150px;
   height: 200px;
 }
 .grid-item1:hover{
   transform: 10px;
   transition-duration: 1s;
 }
+/*BUTTON*/
+.button {
+  margin-left: 350px;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(30, 95, 17);
+  border-radius: 10rem;
+  z-index: -2;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #74b300;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover:before {
+  width: 100%;
+}
+
+/*MEDIA QUERYS*/
+@media only screen and (max-with:700px){
+  *{
+    text-align: center;
+  }
+    nav ul{
+      width: 100%;
+      position: absolute;
+      top: 75px;
+      right: 0;
+      z-index: 2;
+    }
+    nav ul li{
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
 
 /*SLIDESHOW*/
 
@@ -60,8 +138,8 @@ p {
   position: absolute;
   object-fit: fill;
   margin: 50px auto;
-  width: 700px;
-  height: 1100px;
+  width: 40%;
+  height: 100%;
   animation: round 16s infinite;
   opacity: 0;
   border-radius: 15px;
@@ -102,50 +180,32 @@ img:nth-child(4) {
 
 
 /*NAVBAR*/
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+nav {
+  flex: 1;
+  text-align: right;
+}
 
-li {
-  font-family: "Comfortaa";
-  margin:10px;
-  display: inline;
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
 }
-ul {
-  font-family: "Comfortaa";
-  margin:0px;
-  padding: 0px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-ul {
-  border: 10px solid #eaeff1;
-  background-color: #eaeff1;
-  border-radius: 25px;
-  padding: 20px;
-  margin-top: 20px;
-  width: 10px;
-  height: 7px;
-}
-ul {
-  position: fixed right;
-  top: 0;
-  width: fit-content;
-}
-li ul{
-  font-family: "Comfortaa";
-}
-li a {
-  font-family: "Comfortaa";
-  font-size: 20px;
-  color: #4c5f4a;
-}
-.active {
-  background-color: #04AA6D;
+
+a{
+  color: #FFFFFF;
 }
 a:hover{
-  color: #8fbc8f;
+  color: rgb(30, 95, 17);
 }
-
 /*ANIMATIONS*/
 
 /*CHECKLIST*/
